@@ -179,7 +179,7 @@ if(isset($_POST['pname']) && isset($_POST['clss']) && isset($_POST['fst']) && is
 	} else {
 
 
-	$fid = 'fgs/'.rand(0, 9999);
+	$fid = 'dms/'.rand(0, 9999);
 	$der = $_SESSION['aca'];
 
 	
@@ -285,14 +285,14 @@ if (isset($_POST['ursfr'])) {
 	//update classes
 	if($cs == "Reception"){
 
-		$cls = "Transition";
+		$cls = "Pre-School";
 
 		$sql = "UPDATE student SET `session` = '$aca', `class` = '$cls', `fst` = '0', `snd` = '0', `trd` = '0'";
 		$res = query($sql);
 		
 	} else {
 		
-	if($cs == "Transition"){
+	if($cs == "Pre-School"){
 
 		$cls = "Kindergarten";
 
@@ -500,7 +500,7 @@ function outstanding($ses, $data) {
 
 	} else {
 		
-		$spillid = 'fgsspill/'.rand(0, 9999);
+		$spillid = 'dmsspill/'.rand(0, 9999);
 		
 		//get student/pupil details
 		$adid 	= $vfh['adid'];
@@ -571,7 +571,7 @@ if (isset($_POST['std']) && isset($_POST['trm']) && isset($_POST['fee']) && isse
 
 	$red  = $_SESSION['aca'];
 
-	$fid = 'fgstran/'.rand(0, 9999);
+	$fid = 'dmstran/'.rand(0, 9999);
 
 	$date = date("Y-m-d");
 	
@@ -732,7 +732,7 @@ if(isset($_POST['std']) && isset($_POST['fee']) && isset($_POST['mdd']) && isset
 	$pdet	= $_POST['pdet'];
 	$desc   = "SpillOver Payment";
 
-	$fid = 'fgstran/'.rand(0, 9999);
+	$fid = 'dmstran/'.rand(0, 9999);
 	$date = date("Y-m-d");
 
 	
@@ -841,7 +841,7 @@ if(isset($_POST['cinmdd']) && isset($_POST['cinfee']) && isset($_POST['cinstd'])
 	$ses     = $_SESSION['aca'];
 	$dat = date("Y-m-d");
 
-	$cusid = 'fgstran/'.rand(0, 9999);
+	$cusid = 'dmstran/'.rand(0, 9999);
 
 	//get student record
 	$sql = "SELECT * FROM student WHERE `adid` = '$std'";
@@ -892,7 +892,7 @@ if(isset($_POST['exname']) && isset($_POST['examt']) && isset($_POST['extype']) 
 	$date   = date("Y-m-d h:i:sa");
 	$ses    = $_SESSION['aca'];
 	$trm    = $_SESSION['trm'];
-	$expid = 'fgsexp/'.rand(0, 9999);
+	$expid = 'dmsexp/'.rand(0, 9999);
 
 	$sql = "INSERT INTO tracker(`trackid`, `name`, `date`, `session`, `term`, `descrip`, `type`, `mode`, `amount`, `qty` , `total`)";
 	$sql .= "VALUES('$expid', '$exname', '$date', '$ses', '$trm', '$exdesc', '$extype', '$expay', '$examt', '$qty', '$tot')";

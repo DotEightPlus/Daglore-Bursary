@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-Pre-School sidebar-mini layout-fixed">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -48,7 +48,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="./" class="brand-link">
-                <img src="img/2.png" alt="Fountain of Gold School ~ Bursary" class="brand-image img-circle elevation-3"
+                <img src="img/2.png" alt="Daglore ~ Bursary" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">Daglore Bursary</span>
             </a>
@@ -182,9 +182,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./input?id=Transition" class="nav-link">
+                                    <a href="./input?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -290,9 +290,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./allhistory?id=Transition" class="nav-link">
+                                    <a href="./allhistory?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -399,9 +399,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./transaction?id=Transition" class="nav-link">
+                                    <a href="./transaction?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -514,9 +514,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./recprev?id=Transition" class="nav-link">
+                                    <a href="./recprev?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -636,9 +636,9 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./payspill?id=Transition" class="nav-link">
+                                            <a href="./payspill?id=Pre-School" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>Transition</p>
+                                                <p>Pre-School</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
