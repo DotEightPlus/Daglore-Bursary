@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title -->
-    <title>Fountain of Gold ~ Bursary</title>
+    <title>Daglore Model School ~ Bursary</title>
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
@@ -34,7 +34,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="https://fountainofgoldschool.com.ng" class="nav-link">Website</a>
+                    <a href="https://dagloremodelschool.com.ng" class="nav-link">Website</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="https://doteightplus.com/contact" target="_blank" class="nav-link">Dashboard Help</a>
@@ -50,7 +50,7 @@
             <a href="./" class="brand-link">
                 <img src="img/2.png" alt="Fountain of Gold School ~ Bursary" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
-                <span class="brand-text font-weight-light">FGS Bursary</span>
+                <span class="brand-text font-weight-light">Daglore Bursary</span>
             </a>
 
             <!-- Sidebar -->
