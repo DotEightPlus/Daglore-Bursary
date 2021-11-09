@@ -115,7 +115,7 @@ function adid_exist($adid) {
 //---------------  admin dashboard functions ---------//
 if (isset($_POST['password'])) {
 	
-		$admission       = escape(clean("FGS"));
+		$admission       = escape(clean("Daglore"));
 		$password   	 = escape(clean(md5($_POST['password'])));
 
 		$sql 	= "SELECT `password` FROM `admin` WHERE `username` = '$admission'";

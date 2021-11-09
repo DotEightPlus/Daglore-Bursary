@@ -2,13 +2,13 @@
 include("functions/init.php");
 
 
+echo md5('adminlogin');
 
 /*payment tracker
 - split names into two
 - group records based on the first name
 - any where it finds a variabel, it sum up their record
 
-*/
 
 //split names into two
 $sql = "SELECT * FROM student ORDER BY `name` asc";
@@ -19,13 +19,12 @@ $myvalue = $row['name'];
 $arr = explode(' ',trim($myvalue));
 $new = $arr[0]; // will print Test
 
-echo $new;
+//echo $new;
 
 //group the names as one
 
 }
 
-//echo md5('7175Tmjcf@');
 /*?8$gb = "UPDATE admin SET `password` = '$ab' WHERE `username` = 'Daglore'";
 $gf = query($gb);*/
 
