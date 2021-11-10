@@ -10,7 +10,7 @@ include("functions/init.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title -->
-    <title>Fountain of Gold School ~ Bursary</title>
+    <title>Daglore Model School ~ Bursary</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/2.png">
@@ -30,7 +30,7 @@ include("functions/init.php");
     <!-- Automatic element centering -->
     <div class="lockscreen-wrapper">
         <div class="lockscreen-logo">
-            <a href="https://fountainofgoldschool.com.ng"><b>FOGS Bursary</b></a>
+            <a href="https://dagloremodelschool.com.ng"><b>Daglore Bursary</b></a>
         </div>
         <!-- User name -->
         <div class="lockscreen-name">Admin Login</div>
@@ -65,8 +65,8 @@ include("functions/init.php");
         </div>
 
         <div class="lockscreen-footer text-center">
-            Copyright &copy; <?php echo date("Y"); ?> <b><a href="https://fountainofgoldschool.com.ng"
-                    class="text-black">Fountain of Gold School</a></b><br>
+            Copyright &copy; <?php echo date("Y"); ?> <b><a href="https://dagloremodelschool.com.ng"
+                    class="text-black">Daglore Model School</a></b><br>
             Developed by <a target="_blank" href="https://doteightplus.com" class="text-black"> DotEightPlus</a>
         </div>
     </div>
