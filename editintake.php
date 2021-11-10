@@ -74,7 +74,7 @@ if(!isset($_GET['id'])) {
                                                 <option id="clss" class="font-weight-bolder"><?php echo $row['class'] ?>
                                                 </option>
                                                 <option id="clss">Reception</option>
-                                                <option id="clss">Transition</option>
+                                                <option id="clss">Pre-School</option>
                                                 <option id="clss">Kindergarten</option>
                                                 <option id="clss">Nursery 1</option>
                                                 <option id="clss">Nursery 2</option>

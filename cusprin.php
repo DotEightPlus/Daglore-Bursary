@@ -147,9 +147,9 @@ $bal = $amt - $mm;
                     <table>
                         <tr>
                             <td>
-                                Fountain of Gold School,<br />
-                                Ota, Ogun State.<br />
-                                +234 813 677 0523
+                                Daglore Model School,<br />
+                                Ikole, Ekiti State.<br />
+                                +234 806 972 2512
                             </td>
 
                             <td>
