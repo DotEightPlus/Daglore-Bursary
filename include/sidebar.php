@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title -->
-    <title>Fountain of Gold ~ Bursary</title>
+    <title>Daglore ~ Bursary</title>
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-Pre-School sidebar-mini layout-fixed">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -34,7 +34,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="https://fountainofgoldschool.com.ng" class="nav-link">Website</a>
+                    <a href="https://dagloremodelschool.com.ng" class="nav-link">Website</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="https://doteightplus.com/contact" target="_blank" class="nav-link">Dashboard Help</a>
@@ -48,9 +48,9 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="./" class="brand-link">
-                <img src="img/2.png" alt="Fountain of Gold School ~ Bursary" class="brand-image img-circle elevation-3"
+                <img src="img/2.png" alt="Daglore School ~ Bursary" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
-                <span class="brand-text font-weight-light">FGS Bursary</span>
+                <span class="brand-text font-weight-light">Daglore Bursary</span>
             </a>
 
             <!-- Sidebar -->
@@ -135,12 +135,12 @@
                                         <p>Expenses Tracker</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!--<li class="nav-item">
                                     <a href="./paymenttracker" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Payment Tracker</p>
                                     </a>
-                                </li>
+                                </li>-->
                                 <li class="nav-item">
                                     <a href="./createcustom" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
@@ -182,9 +182,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./input?id=Transition" class="nav-link">
+                                    <a href="./input?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -290,9 +290,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./allhistory?id=Transition" class="nav-link">
+                                    <a href="./allhistory?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -399,9 +399,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./transaction?id=Transition" class="nav-link">
+                                    <a href="./transaction?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -514,9 +514,9 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./recprev?id=Transition" class="nav-link">
+                                    <a href="./recprev?id=Pre-School" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Transition</p>
+                                        <p>Pre-School</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -636,9 +636,9 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="./payspill?id=Transition" class="nav-link">
+                                            <a href="./payspill?id=Pre-School" class="nav-link">
                                                 <i class="far fa-dot-circle nav-icon"></i>
-                                                <p>Transition</p>
+                                                <p>Pre-School</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
