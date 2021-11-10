@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include("functions/init.php");
 
 $data = $_GET['id'];
@@ -46,7 +46,7 @@ $bal = $a - $amt;
 
 <head>
     <meta charset="utf-8" />
-    <title>FOGS Bursary</title>
+    <title>Daglore Bursary</title>
     <link rel="icon" href="img/2.png" type="image/ico" />
     <style>
     .invoice-box {
