@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include("functions/top.php");
 
 $trm =  $_SESSION['trm'];
@@ -12,7 +12,7 @@ $ses = $_SESSION['aca'];
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Welcome <b>Fountain of Gold School</b></h1>
+                    <h1 class="m-0 text-dark">Welcome <b>Daglore Model School</b></h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
