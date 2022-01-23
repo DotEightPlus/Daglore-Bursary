@@ -41,7 +41,7 @@ include("functions/top.php");
                             <select id="clss" class="form-control">
 
                                 <option id="clss">Reception</option>
-                                <option id="clss">Pre-School</option>
+                                <option id="clss">Transition</option>
                                 <option id="clss">Kindergarten</option>
                                 <option id="clss">Nursery 1</option>
                                 <option id="clss">Nursery 2</option>

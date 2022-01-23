@@ -39,7 +39,7 @@ include("functions/top.php"); ?>
                                         <!-- text input -->
                                         <div class="form-group">
                                             <label>Admission No</label>
-                                            <input type="text" id="adid" class="form-control" placeholder="DMS/">
+                                            <input type="text" id="adid" class="form-control" placeholder="FOGS/">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
@@ -56,7 +56,7 @@ include("functions/top.php"); ?>
                                             <label>Select Class</label>
                                             <select id="clss" class="form-control">
                                                 <option id="clss">Reception</option>
-                                                <option id="clss">Pre-School</option>
+                                                <option id="clss">Transition</option>
                                                 <option id="clss">Kindergarten</option>
                                                 <option id="clss">Nursery 1</option>
                                                 <option id="clss">Nursery 2</option>

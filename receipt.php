@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include("functions/init.php");
 
 $data = $_GET['id'];
@@ -10,15 +10,15 @@ $fes = query($fsl);
 $fow = mysqli_fetch_array($fes);
 
 //get total paid fee
-$sql = "SELECT *, sum(`amount`) as total FROM feercrd WHERE `adid` = '$data'";
+$sql = "SELECT *, sum(`amount`) as total FROM feercrd WHERE `adid` = '$data' AND `feeid` = '$more'";
 $res = query($sql);
 $row = mysqli_fetch_array($res);
 
-$adid = $row['adid'];
-$amt  = $row['total'];
+$adid  = $row['adid'];
+$amt   = $row['total'];
 $other = $row['term'];
 
-$ssl ="SELECT * from `student` WHERE `adid` = '$adid'";
+$ssl = "SELECT * from `student` WHERE `adid` = '$adid'";
 $result = query($ssl);
 $vfh = mysqli_fetch_array($result);
 
@@ -39,14 +39,79 @@ if($other == '3rd Term') {
 }
 }
 
-$bal = $a - $amt;
+if($_SESSION['trm'] == '2nd Term') {
+
+    //get all payement record
+    $sql = "SELECT *, sum(`fst`) as fee FROM student WHERE `adid` = '$adid'";
+    $res = query($sql);
+    $row = mysqli_fetch_array($res);
+    
+    $fstfee = $row['fee'];
+
+    $dql = "SELECT *, sum(`amount`) as total FROM feercrd WHERE `term` = '1st Term' AND `adid` = '$adid'";
+    $des = query($dql);
+    $dow = mysqli_fetch_array($des);
+
+    $fstunpaid = $dow['total'];
+
+    $spillover = $fstfee - $fstunpaid;
+
+    if($spillover == '0' && $other == '1st term') {
+
+        $new = $spillover;
+        $bal = $vfh['snd'] ;
+        
+    } else {
+
+        if($spillover == '0' && $other == '2nd Term') {
+            
+            $new = $spillover;
+            $bal = $vfh['snd'] - $amt;
+            
+        } else {
+
+        //$bal = $vfh['snd'] - $amt;
+        $bal = $vfh['snd'] + $spillover;
+            
+        }
+    }
+
+
+} else {
+
+   
+    if($_SESSION['trm'] == '3rd Term') {
+
+    //get all payement record
+    $sql = "SELECT *, sum(`fst`) as fee, sum(`snd`) as trdd FROM student AND `adid` = '$adid'";
+    $res = query($sql);
+    $row = mysqli_fetch_array($res);
+    
+    $fstfee = $row['fee'] + $row['trdd'];
+
+    $dql = "SELECT *, sum(`amount`) as total FROM feercrd WHERE `term` = '1st Term' AND `term` = '2nd Term' AND `adid` = '$adid'";
+    $des = query($dql);
+    $dow = mysqli_fetch_array($des);
+
+    $fstunpaid = $dow['total'];
+
+    $spillover = $fstfee - $fstunpaid;
+
+    $new = $a - $amt;
+    $bal = $spillover + $new;
+        
+    }
+    
+}
+
+
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8" />
-    <title>Daglore Bursary</title>
+    <title>FOGS Bursary</title>
     <link rel="icon" href="img/2.png" type="image/ico" />
     <style>
     .invoice-box {
@@ -155,7 +220,7 @@ $bal = $a - $amt;
                             </td>
 
                             <td>
-                                <small> Receipt ID: <i><b><?php echo $data ?></b></i></small><br />
+                                <small> Receipt ID: <i><b><?php echo $more ?></b></i></small><br />
                                 <small> Printed: <i><b><?php echo date('l, F d, Y'); ?></b></i></small><br />
 
                             </td>
@@ -169,9 +234,9 @@ $bal = $a - $amt;
                     <table>
                         <tr>
                             <td>
-                                Daglore Model School,<br />
-                                Ikole, Ekiti State.<br />
-                                +234 806 972 2512
+                                Fountain of Gold School,<br />
+                                Ota, Ogun State.<br />
+                                +234 813 677 0523
                             </td>
 
                             <td>
@@ -208,6 +273,31 @@ $bal = $a - $amt;
 
                 <td>₦<?php echo number_format($fow['amount']) ?></td>
             </tr>
+            <?php
+            if($_SESSION['trm'] == '2nd Term') {
+
+                echo '
+                <tr class="item">
+                <td>1st Term Pending Balance</td>
+
+            <td>₦'.number_format($spillover).'</td>
+            </tr>
+            ';
+            } 
+
+            if($_SESSION['trm'] == '3rd Term') {
+
+                echo '
+                <tr class="item">
+                <td>2nd Term Pending Balance</td>
+
+            <td>₦'.$spillover.'</td>
+            </tr>
+            ';
+            } 
+            ?>
+
+
 
 
 

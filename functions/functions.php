@@ -115,7 +115,7 @@ function adid_exist($adid) {
 //---------------  admin dashboard functions ---------//
 if (isset($_POST['password'])) {
 	
-		$admission       = escape(clean("Daglore"));
+		$admission       = escape(clean("FGS"));
 		$password   	 = escape(clean(md5($_POST['password'])));
 
 		$sql 	= "SELECT `password` FROM `admin` WHERE `username` = '$admission'";
@@ -179,7 +179,7 @@ if(isset($_POST['pname']) && isset($_POST['clss']) && isset($_POST['fst']) && is
 	} else {
 
 
-	$fid = 'dms/'.rand(0, 9999);
+	$fid = 'fgs/'.rand(0, 9999);
 	$der = $_SESSION['aca'];
 
 	
@@ -285,14 +285,14 @@ if (isset($_POST['ursfr'])) {
 	//update classes
 	if($cs == "Reception"){
 
-		$cls = "Pre-School";
+		$cls = "Transition";
 
 		$sql = "UPDATE student SET `session` = '$aca', `class` = '$cls', `fst` = '0', `snd` = '0', `trd` = '0'";
 		$res = query($sql);
 		
 	} else {
 		
-	if($cs == "Pre-School"){
+	if($cs == "Transition"){
 
 		$cls = "Kindergarten";
 
@@ -500,7 +500,7 @@ function outstanding($ses, $data) {
 
 	} else {
 		
-		$spillid = 'dmsspill/'.rand(0, 9999);
+		$spillid = 'fgsspill/'.rand(0, 9999);
 		
 		//get student/pupil details
 		$adid 	= $vfh['adid'];
@@ -571,7 +571,7 @@ if (isset($_POST['std']) && isset($_POST['trm']) && isset($_POST['fee']) && isse
 
 	$red  = $_SESSION['aca'];
 
-	$fid = 'dmstran/'.rand(0, 9999);
+	$fid = 'fgstran/'.rand(0, 9999);
 
 	$date = date("Y-m-d");
 	
@@ -732,7 +732,7 @@ if(isset($_POST['std']) && isset($_POST['fee']) && isset($_POST['mdd']) && isset
 	$pdet	= $_POST['pdet'];
 	$desc   = "SpillOver Payment";
 
-	$fid = 'dmstran/'.rand(0, 9999);
+	$fid = 'fgstran/'.rand(0, 9999);
 	$date = date("Y-m-d");
 
 	
@@ -841,7 +841,7 @@ if(isset($_POST['cinmdd']) && isset($_POST['cinfee']) && isset($_POST['cinstd'])
 	$ses     = $_SESSION['aca'];
 	$dat = date("Y-m-d");
 
-	$cusid = 'dmstran/'.rand(0, 9999);
+	$cusid = 'fgstran/'.rand(0, 9999);
 
 	//get student record
 	$sql = "SELECT * FROM student WHERE `adid` = '$std'";
@@ -892,7 +892,7 @@ if(isset($_POST['exname']) && isset($_POST['examt']) && isset($_POST['extype']) 
 	$date   = date("Y-m-d h:i:sa");
 	$ses    = $_SESSION['aca'];
 	$trm    = $_SESSION['trm'];
-	$expid = 'dmsexp/'.rand(0, 9999);
+	$expid = 'fgsexp/'.rand(0, 9999);
 
 	$sql = "INSERT INTO tracker(`trackid`, `name`, `date`, `session`, `term`, `descrip`, `type`, `mode`, `amount`, `qty` , `total`)";
 	$sql .= "VALUES('$expid', '$exname', '$date', '$ses', '$trm', '$exdesc', '$extype', '$expay', '$examt', '$qty', '$tot')";
@@ -900,5 +900,55 @@ if(isset($_POST['exname']) && isset($_POST['examt']) && isset($_POST['extype']) 
 
 	echo "Loading...Please wait!";	
 	echo '<script>window.location.href ="./tracker"</script>';
+}
+
+
+
+function termlyspillover() {
+
+	if($_SESSION['trm'] == '2nd Term') {
+
+		//get all payement record
+		$sql = "SELECT *, sum(`fst`) as fee FROM student";
+		$res = query($sql);
+		$row = mysqli_fetch_array($res);
+		
+		$fstfee = $row['fee'];
+	
+		$dql = "SELECT *, sum(`amount`) as total FROM feercrd WHERE `term` = '1st Term'";
+		$des = query($dql);
+		$dow = mysqli_fetch_array($des);
+	
+		$fstunpaid = $dow['total'];
+	
+		$spillover = $fstfee - $fstunpaid;
+	
+		echo number_format($spillover);
+	
+	} else {
+	
+	   
+		if($_SESSION['trm'] == '3rd Term') {
+	
+		//get all payement record
+		$sql = "SELECT *, sum(`fst`) as fee, sum(`snd`) as trdd FROM student";
+		$res = query($sql);
+		$row = mysqli_fetch_array($res);
+		
+		$fstfee = $row['fee'] + $row['trdd'];
+	
+		$dql = "SELECT *, sum(`amount`) as total FROM feercrd WHERE `term` = '1st Term' AND `term` = '2nd Term'";
+		$des = query($dql);
+		$dow = mysqli_fetch_array($des);
+	
+		$fstunpaid = $dow['total'];
+	
+		$spillover = $fstfee - $fstunpaid;
+	
+		echo number_format($spillover);
+			
+		}
+		
+	}
 }
 ?>
